@@ -28,16 +28,16 @@ public class WebApplication implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent sce) {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
 		System.out.println("Initializing..." + dateFormat.format(new Date()));
-		jobProperties = new JobProperties();
+		//jobProperties = new JobProperties();
 		//jobRedis = new JobRedis(jobProperties.getProperties());
 		//
-		jobManager.add(jobProperties);
+		//jobManager.add(jobProperties);
 		//jobManager.add(jobRedis);
-		jobManager.exec();
+		//jobManager.exec();
 		//
 		System.out.println("Initialized..." + dateFormat.format(new Date()));
 		//
-		properties = jobProperties.getProperties();
+		//properties = jobProperties.getProperties();
 		//jedis = jobRedis.getJedis();
 	}
 

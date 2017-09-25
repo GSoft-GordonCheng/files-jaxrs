@@ -27,7 +27,8 @@ dependencies {
 	// https://mvnrepository.com/artifact/redis.clients/jedis
 	compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
 	
-	//compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: '2.25.1'	
-	compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: '2.6'	
+	compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: '2.25.1'	
+	//compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: '2.26'
+		
 }
 
