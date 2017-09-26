@@ -2,6 +2,7 @@ package gordon.files;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Properties;
 
 
@@ -9,7 +10,7 @@ import java.util.Properties;
 * @author Gordon
 */
 public class JobProperties implements IInitialized {
-	private final String FONFIG_NAME = "config.properties";
+	private final String FONFIG_NAME = "/res/config.properties";
 	private Properties properties = new Properties();
 	
 	@Override
@@ -17,7 +18,7 @@ public class JobProperties implements IInitialized {
 		properties.clear();		
 		StringBuilder sb = new StringBuilder();
 		sb.append(FONFIG_NAME);
-	    InputStream  inputStream = getClass().getClassLoader().getResourceAsStream(FONFIG_NAME);
+	    InputStream  inputStream = JobProperties.class.getResourceAsStream(FONFIG_NAME);
 	    if (inputStream != null) {
 	        try {
 	        		properties.load(inputStream);
@@ -32,6 +33,7 @@ public class JobProperties implements IInitialized {
 	    } else {
 	    		sb.append("config.properties : Not Found");
 	    }
+		
 	    return sb.toString();
 	}
 	

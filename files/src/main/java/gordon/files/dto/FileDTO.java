@@ -26,7 +26,7 @@ public class FileDTO implements Serializable {
 		return this.id;
 	}
 	
-	public void getId(String value) {
+	public void setId(String value) {
 		this.id = value;
 	}
 }
